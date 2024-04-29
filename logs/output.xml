@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-12T19:50:33.489255" rpa="false" schemaversion="5">
+<suite id="s1" name="LetsCart" source="C:\Users\admin\PycharmProjects\LetsShop\Test\LetsCart.robot">
+<test id="s1-t1" name="Open LogIn application" line="10">
+<kw name="Login lets shopping" owner="LogInPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:34.020290" level="INFO">Opening browser 'edge' to base url 'https://rahulshettyacademy.com/client'.</msg>
+<arg>${Base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-12T19:50:34.019109" elapsed="6.172672"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-12T19:50:40.191781" elapsed="0.153597"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10 S</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-03-12T19:50:40.346547" elapsed="0.002270"/>
+</kw>
+<kw name="Set Selenium Page Load Timeout" owner="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the page load timeout value used by Selenium.</doc>
+<status status="PASS" start="2024-03-12T19:50:40.349814" elapsed="0.003004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:40.354818" level="INFO">Typing text 'nagarjuna1990@gmail.com' into text field '//input[@placeholder='email@example.com']'.</msg>
+<arg>${email}</arg>
+<arg>${email_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:40.353815" elapsed="0.329495"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:40.685852" level="INFO">Typing text 'Test@2889' into text field '//input[@id='userPassword']'.</msg>
+<arg>${password}</arg>
+<arg>${password_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:40.684582" elapsed="0.216657"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:40.902239" level="INFO">Clicking element 'id:login'.</msg>
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:40.901239" elapsed="0.121987"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:41.333563" level="INFO">Current page contains text 'Login Successfully'.</msg>
+<arg>${home_page}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.024395" elapsed="0.309168"/>
+</kw>
+<status status="PASS" start="2024-03-12T19:50:34.017923" elapsed="7.315640"/>
+</kw>
+<kw name="Search for Iphone" owner="productPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:41.336084" level="INFO">Typing text 'IPHONE 13 PRO' into text field '//div[@class='py-2 border-bottom ml-3']/child::input'.</msg>
+<arg>${search}</arg>
+<arg>${prodcut_info}</arg>
+<arg>enter</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.336084" elapsed="0.300880"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:41.700932" level="INFO">${text} = IPHONE 13 PRO</msg>
+<var>${text}</var>
+<arg>${iphone_Text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.639772" elapsed="0.061160"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.700932" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:41.749035" level="INFO">Current page contains text 'IPHONE 13 PRO'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.700932" elapsed="0.048103"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:41.798011" level="INFO">${veryft_text} = $ 231500</msg>
+<var>${veryft_text}</var>
+<arg>${verify_page}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.749035" elapsed="0.048976"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${veryft_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.798011" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:44.138467" level="INFO">Current page contains text 'Showing 1 results'.</msg>
+<arg>${verfy_No_of_items}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-12T19:50:41.798011" elapsed="2.340456"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:44.138467" level="INFO">Clicking element '//i[@class='fa fa-eye']'.</msg>
+<arg>${eye}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:44.138467" elapsed="0.228483"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:44.652341" level="INFO">Current page contains text 'IPHONE 13 PRO'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-12T19:50:44.366950" elapsed="0.285391"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:44.652341" level="INFO">Clicking element '//button[contains(text(),'Add to Cart')]'.</msg>
+<arg>${add_to_cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:44.652341" elapsed="0.149210"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:44.801551" level="INFO">Clicking element '//i[@class='fa fa-shopping-cart']'.</msg>
+<arg>${cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:44.801551" elapsed="0.246813"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:45.048364" level="INFO">Clicking element '//button[contains(text(),'Checkout')]'.</msg>
+<arg>${checkout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:45.048364" elapsed="0.205934"/>
+</kw>
+<status status="PASS" start="2024-03-12T19:50:41.336084" elapsed="3.918214"/>
+</kw>
+<kw name="lets shopiing payment page" owner="paymentPage">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>.2 S</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-03-12T19:50:45.254298" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:45.254298" level="INFO">Typing text '4645 8879 2289 6468' into text field '//div[text()='Credit Card Number ']/following-sibling::input'.</msg>
+<arg>${credit_card_number}</arg>
+<arg>${credit_card_number_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:45.254298" elapsed="0.832736"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:46.087034" level="INFO">Selecting options from selection list '(//select[@class='input ddl'])[1]' by label 11.</msg>
+<arg>${expairy_date}</arg>
+<arg>${date}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-03-12T19:50:46.087034" elapsed="1.795018"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:47.883062" level="INFO">Selecting options from selection list '(//select[@class='input ddl'])[2]' by label 19.</msg>
+<arg>${expairy_year}</arg>
+<arg>${year}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-03-12T19:50:47.882052" elapsed="1.772272"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:49.654324" level="INFO">Typing text '123' into text field '//div[text()='CVV Code ']/following-sibling::input'.</msg>
+<arg>${cvv}</arg>
+<arg>${cvv_text_feild}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:49.654324" elapsed="0.792354"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:50.446678" level="INFO">Typing text 'vishnu pesala' into text field '//div[text()='Name on Card ']/following-sibling::input'.</msg>
+<arg>${name_of_the_card}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:50.446678" elapsed="0.809806"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_country}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-12T19:50:51.256484" elapsed="0.461587"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:51.718071" level="INFO">Typing text 'in' into text field '//input[@placeholder='Select Country']'.</msg>
+<arg>${select_country}</arg>
+<arg>${country_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:51.718071" elapsed="0.799198"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:52.845730" level="INFO">${list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.190")&gt;, &lt;selenium.webdri...</msg>
+<var>${list}</var>
+<arg>${countrys_list}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:52.517269" elapsed="0.328461"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-12T19:50:52.845730" level="INFO">[&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.190")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.192")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.193")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.194")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.195")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.196")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.197")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.198")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.199")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.200")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.201")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.202")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.203")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.204")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.205")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.206")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.207")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.208")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.209")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.210")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.211")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.212")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.213")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.214")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.215")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.216")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.217")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.218")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.219")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.220")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.221")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.222")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.223")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.224")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.225")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.226")&gt;]</msg>
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-12T19:50:52.845730" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:53.071716" level="INFO">${current_text} = Argentina</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:52.845730" elapsed="0.225986"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:53.071716" elapsed="0.482932"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:53.555661" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:53.555661" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:53.555661" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:53.554648" elapsed="0.001013"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:53.554648" elapsed="0.001013"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.190")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:52.845730" elapsed="0.709931"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:53.776966" level="INFO">${current_text} = Bahrain</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:53.555661" elapsed="0.221305"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:53.776966" elapsed="0.493294"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:54.270260" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:54.270260" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:54.270260" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:54.270260" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:54.270260" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.191")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:53.555661" elapsed="0.714599"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:54.493519" level="INFO">${current_text} = Benin</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:54.270260" elapsed="0.223259"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:54.493519" elapsed="0.490799"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:54.984318" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:54.984318" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:54.984318" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:54.984318" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:54.984318" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.192")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:54.270260" elapsed="0.714058"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:55.208711" level="INFO">${current_text} = Bosnia and Herzegowina</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:54.986830" elapsed="0.221881"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:55.208711" elapsed="0.499878"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:55.708589" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:55.708589" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:55.708589" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:55.708589" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:55.708589" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.193")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:54.986830" elapsed="0.721759"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:55.931402" level="INFO">${current_text} = British Indian Ocean Territory</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:55.711102" elapsed="0.220300"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:55.931402" elapsed="0.490091"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:56.421493" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:56.423004" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:56.423004" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:56.421493" elapsed="0.001511"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:56.421493" elapsed="0.001511"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.194")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:55.711102" elapsed="0.711902"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:56.645254" level="INFO">${current_text} = Burkina Faso</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:56.423004" elapsed="0.222250"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:56.645254" elapsed="0.487127"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:57.132381" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:57.132381" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:57.132381" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:57.132381" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:57.132381" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.195")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:56.423004" elapsed="0.709377"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:57.356000" level="INFO">${current_text} = China</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:57.135421" elapsed="0.220579"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:57.356000" elapsed="0.480261"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:57.837292" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:57.837292" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:57.837292" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:57.836261" elapsed="0.001031"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:57.836261" elapsed="0.001031"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.196")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:57.135421" elapsed="0.701871"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:58.059194" level="INFO">${current_text} = Cocos (Keeling) Islands</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:57.837292" elapsed="0.221902"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:58.059194" elapsed="0.503880"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:58.563074" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:58.563074" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:58.563074" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:58.563074" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:58.563074" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.197")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:57.837292" elapsed="0.725782"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:58.788013" level="INFO">${current_text} = Dominica</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:58.563074" elapsed="0.224939"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:58.788013" elapsed="0.500947"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:59.288960" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:59.288960" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:59.288960" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:59.288960" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:59.288960" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.198")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:58.563074" elapsed="0.725886"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:50:59.511623" level="INFO">${current_text} = Dominican Republic</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:59.288960" elapsed="0.222663"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:50:59.511623" elapsed="0.486597"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:50:59.998220" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:50:59.998220" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:50:59.998220" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:50:59.998220" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:50:59.998220" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.199")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:59.288960" elapsed="0.709260"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:00.234471" level="INFO">${current_text} = Equatorial Guinea</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:50:59.998220" elapsed="0.236251"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:51:00.234471" elapsed="0.489659"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:51:00.724130" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:51:00.724130" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:51:00.724130" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:51:00.724130" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:51:00.724130" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.200")&gt;</var>
+<status status="PASS" start="2024-03-12T19:50:59.998220" elapsed="0.725910"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:00.947961" level="INFO">${current_text} = Falkland Islands (Malvinas)</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:00.724130" elapsed="0.223831"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:51:00.947961" elapsed="0.508021"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:51:01.455982" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:51:01.455982" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:51:01.455982" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:51:01.455982" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:51:01.455982" elapsed="0.000000"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.201")&gt;</var>
+<status status="PASS" start="2024-03-12T19:51:00.724130" elapsed="0.731852"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:01.680086" level="INFO">${current_text} = Finland</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:01.455982" elapsed="0.224104"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:51:01.680086" elapsed="0.507503"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:51:02.187589" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:51:02.189103" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:51:02.189103" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:51:02.187589" elapsed="0.001514"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:51:02.187589" elapsed="0.001514"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.202")&gt;</var>
+<status status="PASS" start="2024-03-12T19:51:01.455982" elapsed="0.733121"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:02.411459" level="INFO">${current_text} = Guinea</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:02.189103" elapsed="0.222356"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:51:02.411459" elapsed="0.502575"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:51:02.915046" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:51:02.915046" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:51:02.915046" elapsed="0.002075"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:51:02.914034" elapsed="0.003087"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:51:02.914034" elapsed="0.003445"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.203")&gt;</var>
+<status status="PASS" start="2024-03-12T19:51:02.189103" elapsed="0.728649"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:03.141685" level="INFO">${current_text} = Guinea-Bissau</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:02.917978" elapsed="0.223707"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:51:03.141685" elapsed="0.488137"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="NOT RUN" start="2024-03-12T19:51:03.629822" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-12T19:51:03.629822" elapsed="0.000000"/>
+</kw>
+<break>
+<status status="NOT RUN" start="2024-03-12T19:51:03.629822" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-03-12T19:51:03.629822" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:51:03.629822" elapsed="0.003014"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.204")&gt;</var>
+<status status="PASS" start="2024-03-12T19:51:02.917978" elapsed="0.714858"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:03.853678" level="INFO">${current_text} = India</msg>
+<var>${current_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:03.632836" elapsed="0.220842"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-12T19:51:03.853678" elapsed="0.482606"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_text}' == 'India'">
+<kw name="util:wait until element clickable" owner="UiWaitsLibrary">
+<arg>//span[normalize-space()='India']</arg>
+<status status="PASS" start="2024-03-12T19:51:04.337294" elapsed="0.683141"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:05.020435" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.205")&gt;'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:05.020435" elapsed="0.286630"/>
+</kw>
+<break>
+<status status="PASS" start="2024-03-12T19:51:05.307065" elapsed="0.000000"/>
+</break>
+<status status="PASS" start="2024-03-12T19:51:04.336284" elapsed="0.970781"/>
+</branch>
+<status status="PASS" start="2024-03-12T19:51:04.336284" elapsed="0.970781"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9cbccc6f1190a5a3d586a7622ad6bc7c", element="f.07BAC0008F5F343CC51BEADE7BB4B8CF.d.8221B3407C88B0D85FF907FE5915DAB4.e.205")&gt;</var>
+<status status="PASS" start="2024-03-12T19:51:03.632836" elapsed="1.674229"/>
+</iter>
+<var>${element}</var>
+<value>@{list}</value>
+<status status="PASS" start="2024-03-12T19:50:52.845730" elapsed="12.461335"/>
+</for>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:05.850672" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-12T19:51:05.307065" elapsed="0.543607"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:05.850672" level="INFO">Clicking element '//a[normalize-space()="Place Order"]'.</msg>
+<arg>${place_order}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:05.850672" elapsed="0.520736"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:06.816951" level="INFO">Current page contains text 'IPHONE 13 PRO'.</msg>
+<arg>IPHONE 13 PRO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-12T19:51:06.371408" elapsed="0.445543"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-12T19:51:06.817983" level="INFO">Clicking element '//button[contains(text(),'Click To Download Order Details in CSV')]'.</msg>
+<arg>${invoice}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-12T19:51:06.816951" elapsed="0.500189"/>
+</kw>
+<status status="PASS" start="2024-03-12T19:50:45.254298" elapsed="22.062842"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-12T19:51:07.317140" elapsed="2.487256"/>
+</kw>
+<status status="PASS" start="2024-03-12T19:50:34.016650" elapsed="35.787746"/>
+</test>
+<status status="PASS" start="2024-03-12T19:50:33.492792" elapsed="36.311604"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LetsCart">LetsCart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
